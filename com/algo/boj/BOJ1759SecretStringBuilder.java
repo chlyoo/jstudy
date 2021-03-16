@@ -11,7 +11,6 @@ public class BOJ1759SecretStringBuilder {
 	private static String vowel = "aeiou";
 	private static StringBuilder sb = new StringBuilder();
 	private static char[] map;
-	private static char[] chars;
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,7 +23,6 @@ public class BOJ1759SecretStringBuilder {
 			map[i] = st.nextToken().charAt(0);
 		}
 		Arrays.sort(map);
-		chars = new char[L];
 		comb(0,0,0);
 	}
 	//count c== 자음 countv == 모음 
