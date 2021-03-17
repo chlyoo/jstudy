@@ -10,6 +10,7 @@ class SWEA1767ProcessorSolutionMineOptimize{
 	private static int corecount;
 	public static void main(String args[]) throws Exception	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		int TC = Integer.parseInt(br.readLine());
 		for (int testCase = 1; testCase <= TC; testCase++) {
 			N= Integer.parseInt(br.readLine());
@@ -34,8 +35,9 @@ class SWEA1767ProcessorSolutionMineOptimize{
 				System.arraycopy(map, 0, copymap, 0, N);
 			}
 			connect(0,0);
-			System.out.println("#"+testCase+" "+minLine);
+			sb.append("#").append(testCase).append(" ").append(minLine).append("\n");
 		}//testCase
+		System.out.print(sb);
 	}
 	private static int[] dx = {-1,0,1,0};
 	private static int[] dy = {0,-1,0,1};
