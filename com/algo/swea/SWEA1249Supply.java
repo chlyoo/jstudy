@@ -39,7 +39,6 @@ public class SWEA1249Supply {
 	}
 
 	private static int bfs() {
-		int min = Integer.MAX_VALUE;
 		Queue<int[]> Q = new LinkedList<>();
 		Q.offer(new int[] {startx,starty});
 		cmap[startx][starty] =0;
@@ -48,9 +47,6 @@ public class SWEA1249Supply {
 			int[] temp = Q.poll();
 			int posx = temp[0];
 			int posy = temp[1];
-			if(posx==destx && posy==desty) { //종료되는 위치에서 최소값을 찾는다.
-				min = cmap[destx][desty]<min ? cmap[destx][desty]:min;
-			}
 			for (int i = 0; i < 4; i++) {
 				int tempx = posx +dx[i];
 				int tempy = posy +dy[i];
@@ -62,6 +58,6 @@ public class SWEA1249Supply {
 				}
 			}
 		}
-		return min;
+		return cmap[destx][desty];
 	}
 }
