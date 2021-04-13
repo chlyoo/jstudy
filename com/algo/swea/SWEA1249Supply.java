@@ -10,7 +10,7 @@ public class SWEA1249Supply {
 	private static boolean[][] visited;
 	private static int[] dx = {1,0,-1,0};		
 	private static int[] dy = {0,1,0,-1};		
-	private static int startx, starty,destx, desty, N;
+	private static int startx, starty,destx , desty, N;
 	private static int[][] cmap, map;
 
 	public static void main(String[] args) throws Exception{
